@@ -32,7 +32,6 @@
     <div class="line-3"></div>
     <div class="sign-in2">Sign in</div>
   </div>
-  
 </div>
 </template>
 
@@ -180,16 +179,15 @@
   top: -280px;
 }
 .sign-in2 {
+  left: 1100.84px;
+  top: -320px;
+  width: 98.02px;
+  height: 16px;
   color: #4461f2;
   text-align: left;
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 17px;
   font-weight: 700;
   position: absolute;
-  left: 1100.84px;
-  top: -320px;
-  width: 98.02px;
-  height: 16px;
 }
-
 </style>
