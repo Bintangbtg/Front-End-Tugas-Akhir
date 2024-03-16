@@ -32,9 +32,10 @@
     <div class="line-3"></div>
     <div class="sign-in2">Sign in</div>
   </div>
+  <form @submit.prevent="submitLogin">
   <div class="enter-name">
   <div class="rectangle-2"></div>
-  <div class="enter-email">Enter Email</div>
+  <input type="text" v-model="form.email" class="enter-email" placeholder="Enter Email" />
   <div class="x-icon">
     <svg
       class="x"
@@ -69,7 +70,7 @@
 </div>
 <div class="password">
   <div class="rectangle-3"></div>
-  <div class="div">••••••••</div>
+  <input type="text" v-model="form.password" class="div" placeholder="••••••••"/>
   <div class="x-icon">
     <svg
       class="group-237455"
@@ -123,8 +124,9 @@
 </div>
 <div class="bouton-sign-in">
   <div class="rectangle-4"></div>
-  <div class="sign-in">Sign In</div>
+  <button type="submit" class="sign-in">Sign In</button>
 </div>
+</form>
 </div>
 </template>
 
@@ -268,7 +270,7 @@
   width: 34.44px;
   height: 0px;
   position: absolute;
-  left: 1015.84px;
+  left: 1110.84px;
   top: -280px;
 }
 .sign-in2 {
@@ -318,6 +320,8 @@
   bottom: 0%;
   top: 0%;
   height: 100%;
+  background: none;
+  border: none;
 }
 .x-icon {
   width: 6%;
@@ -361,7 +365,7 @@
   color: #667085;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 26px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   position: absolute;
@@ -371,6 +375,8 @@
   bottom: 35.06%;
   top: 33.77%;
   height: 31.17%;
+  background: none;
+  border: none;
 }
 .x-icon {
   width: 6%;
@@ -434,9 +440,57 @@
   font-size: 19px;
   line-height: 77px;
   font-weight: 700;
-  position: absolute;
+  position: relative;
   left: 940px;
   top: 80px;
+  background: none;
+  border: none;
 }
-
 </style>
+
+<script>
+import {ref} from 'vue';
+import axios from 'axios';
+import { useRouter } from 'vue-router';
+import Swal from 'sweetalert2';
+
+export default {
+  name: "Login",
+  setup() {
+    const router = useRouter();
+
+    const form = ref({
+      email: '',
+      password: ''
+    });
+
+    const submitLogin = async () => {
+        try {
+        await axios.post('http://localhost:8000/api/login', {
+          email: form.value.email,
+          password: form.value.password
+        });
+
+        router.push('/home');
+      } catch (error) {
+        showErrorMessage('Login failed. Please check your credentials.');
+      }
+    };
+
+    const showErrorMessage = (message) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: message
+      });
+    };
+
+    return {
+    form,
+    submitLogin,
+    router,
+    showErrorMessage
+  };
+  }
+}
+</script>
