@@ -32,10 +32,10 @@
     <div class="line-3"></div>
     <div class="sign-in2">Sign in</div>
   </div>
-  <form @submit.prevent="Register">
+  <form @submit.prevent="register">
   <div class="enter-name">
   <div class="rectangle-2"></div>
-  <input type="text" v-model="form.email" class="enter-email" placeholder="Username">
+  <input type="text" v-model="form.name" class="enter-email" placeholder="Username">
   <div class="x-icon">
     <svg
       class="x"
@@ -70,7 +70,7 @@
 </div>
 <div class="password">
   <div class="rectangle-3"></div>
-  <input type="text" v-model="form.email" class="div" placeholder="Email" />
+  <input type="email" v-model="form.email" class="div" placeholder="Email" />
   <div class="x-icon">
     <svg
       class="group-237455"
@@ -121,7 +121,7 @@
 </div>
 <div class="enter-username">
   <div class="rectangle-username"></div>
-  <input type="text" v-model="form.password" class="enter-usernama" placeholder="Password"/>
+  <input type="password" v-model="form.password" class="enter-usernama" placeholder="Password"/>
   <div class="x-icon">
     <svg
       class="group-237455"
@@ -203,7 +203,7 @@
 </div>
 <div class="confirm-password">
   <div class="rectangle-confirm"></div>
-  <input type="text" v-model="form.confirm" class="div-confirm" placeholder="Confirm Password" />
+  <input type="password" v-model="form.confirm" class="div-confirm" placeholder="Confirm Password" />
   <div class="x-icon-confirm">
     <svg
       class="group-237455-confirm"
@@ -257,7 +257,7 @@
 </div>
 <div class="bouton-sign-in">
   <div class="rectangle-4"></div>
-  <button type="submit" class="sign-in">Sign In</button>
+  <button type="submit" class="sign-in">Register</button>
 </div>
 </form>
 </div>
@@ -690,49 +690,51 @@
 }
 </style>
 
-<script>
-import {ref} from 'vue';
+<script setup>
+import { ref } from 'vue';
 import axios from 'axios';
 import { useRouter } from 'vue-router';
 import Swal from 'sweetalert2';
 
-export default {
-  name: "Register",
-  setup() {
-    const router = useRouter();
+const router = useRouter();
+const form = ref({
+  name: '',
+  email: '',
+  password: '',
+  confirm: ''
+});
 
-    const form = ref({
-      email: '',
-      password: ''
+const register = async () => {
+
+  console.log(form.value)
+  // Validasi apakah password dan konfirmasi password cocok
+  if (form.value.password !== form.value.confirm) {
+    showErrorMessage('Password and Confirm Password do not match.');
+    return; // Menghentikan fungsi di sini jika password tidak cocok
+  }
+
+  try {
+    const response = await axios.post('http://localhost:8000/api/register', {
+      name: form.value.name,
+      email: form.value.email,
+      password: form.value.password
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
 
-    const submitLogin = async () => {
-        try {
-        await axios.post('http://localhost:8000/api/register', {
-          email: form.value.email,
-          password: form.value.password
-        });
-
-        router.push('/home');
-      } catch (error) {
-        showErrorMessage('Login failed. Please check your credentials.');
-      }
-    };
-
-    const showErrorMessage = (message) => {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: message
-      });
-    };
-
-    return {
-    form,
-    submitLogin,
-    router,
-    showErrorMessage
-  };
+    router.push('/home');
+  } catch (error) {
+    showErrorMessage('Registration failed. Please try again later.');
   }
-}
+};
+
+const showErrorMessage = (message) => {
+  Swal.fire({
+    icon: 'error',
+    title: 'Error',
+    text: message
+  });
+};
 </script>

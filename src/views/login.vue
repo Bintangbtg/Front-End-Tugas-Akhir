@@ -448,49 +448,46 @@
 }
 </style>
 
-<script>
-import {ref} from 'vue';
+<script setup>
+import { ref } from 'vue';
 import axios from 'axios';
 import { useRouter } from 'vue-router';
 import Swal from 'sweetalert2';
 
-export default {
-  name: "Login",
-  setup() {
-    const router = useRouter();
+const router = useRouter();
+const form = ref({
+  email: '',
+  password: ''
+});
 
-    const form = ref({
-      email: '',
-      password: ''
-    });
-
-    const submitLogin = async () => {
-        try {
-        await axios.post('http://localhost:8000/api/login', {
-          email: form.value.email,
-          password: form.value.password
-        });
-
-        router.push('/home');
-      } catch (error) {
-        showErrorMessage('Login failed. Please check your credentials.');
+const submitLogin = async () => {
+  // Melihat data yang akan dikirim
+  console.log('Data yang akan dipost:', form.value);
+  
+  try {
+    const response = await axios.post('http://localhost:8000/api/login', {
+      email: form.value.email,
+      password: form.value.password
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
       }
-    };
+    });
+    
+    // Menampilkan respons dari server
+    console.log('Respon dari server:', response.data);
 
-    const showErrorMessage = (message) => {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: message
-      });
-    };
-
-    return {
-    form,
-    submitLogin,
-    router,
-    showErrorMessage
-  };
+    router.push('/home');
+  } catch (error) {
+    showErrorMessage('Login failed. Please check your credentials.');
   }
-}
+};
+
+const showErrorMessage = (message) => {
+  Swal.fire({
+    icon: 'error',
+    title: 'Error',
+    text: message
+  });
+};
 </script>
