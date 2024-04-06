@@ -11,16 +11,24 @@
         Meroket
         <br />
       </div>
-      <div class="find-competition">Find Competition</div>
-      <div class="teams">Teams</div>
-      <div class="my-role">My Role</div>
-      <div class="projects">Projects</div>
-      <!-- button atas kanan -->
-      <img class="image-1" src="../assets/image-10.png" />
-      <img class="image-2" src="../assets/image-20.png" />
-      <img class="image-3" src="../assets/image-40.png" />
+      <router-link to="/join" class="find-competition">Find Competition</router-link>
+      <router-link to="/teams" class="teams">Teams</router-link>
+      <router-link to="/my-role" class="my-role">My Role</router-link>
+      <router-link to="/projects" class="projects">Projects</router-link>
+      <!-- image button atas kanan -->
+      <router-link to="/image-10" class="image-1">
+        <img src="../assets/image-10.png" />
+      </router-link>
+      <router-link to="/image-20" class="image-2">
+        <img src="../assets/image-20.png" />
+      </router-link>
+      <router-link to="/image-40" class="image-3">
+        <img src="../assets/image-40.png" />
+      </router-link>
       <div class="foto-profile">
-        <img class="image-4" src="../assets/image-30.png" />
+        <router-link to="/image-30" class="image-4">
+          <img src="../assets/image-30.png" />
+        </router-link>
       </div>
       <div class="ellipse-13"></div>
       <div class="state-layer"></div>
@@ -39,14 +47,14 @@
         <div class="yogyakarta">Yogyakarta</div>
         <div class="biaya-pendaftaran">Biaya Pendaftaran</div>
         <div class="rp-25-000-tim">Rp. 25.000 / Tim</div>
-        <div class="button-daftar">
+        <router-link to="/daftar-sekarang" class="button-daftar">
           <div class="rectangle-31"></div>
           <div class="daftar-sekarang">Daftar Sekarang</div>
-        </div>
-        <div class="button-daftar">
+        </router-link>
+        <router-link to="/hubungi-narahubung" class="button-daftar">
           <div class="rectangle-312"></div>
           <div class="hubungi-narahubung">Hubungi Narahubung</div>
-        </div>
+        </router-link>
       </div>
       <!-- icon tanggal dan lokasi -->
       <img class="icons-8-date-96-1" src="../assets/icons8-date-91.png" />
@@ -54,9 +62,9 @@
       <!-- poster -->
       <img class="image-5" src="../assets/image-50.png" />
       <div class="button">
-        <div class="label-text">
+        <router-link to="/find-more-competition" class="label-text">
           <div class="label-text2">Find more competition</div>
-        </div>
+        </router-link>
       </div>
       <div class="_11">
         <div class="group-94">
@@ -102,11 +110,11 @@
           pesask vyfisat. Viktiga poddradio har un mad och inde.
         </div>
         <div class="group-96">
-          <div class="home">Home</div>
-          <div class="service">Service</div>
-          <div class="contact">Contact</div>
-          <div class="resource">Resource</div>
-          <div class="about">About</div>
+          <router-link to="/home" class="home">Home</router-link>
+          <router-link to="/service" class="service">Service</router-link>
+          <router-link to="/contact" class="contact">Contact</router-link>
+          <router-link to="/resource" class="resource">Resource</router-link>
+          <router-link to="/about" class="about">About</router-link>
         </div>
         <div class="group-88">
           <div class="rectangle-16"></div>
