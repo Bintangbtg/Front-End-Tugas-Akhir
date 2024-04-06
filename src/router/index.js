@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Register from '../views/register.vue'
 import Login from '../views/login.vue'
 import Home from '../views/home.vue'
+import Join from '../views/join_competetion.vue'
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/join',
+    name: 'join',
+    component: Join
   }
 ]
 
