@@ -1,16 +1,16 @@
 <template>
-    <div class="daftar">
-      <div class="rectangle-1"></div>
-      <div class="ellipse-1"></div>
-      <div class="ellipse-2"></div>
-      <div class="component-158"></div>
-      <div class="ellipse-12"></div>
-      <div class="ellipse-22"></div>
-      <div class="meroket">
-        Meroket
-        <br />
-      </div>
-      <router-link to="/join" class="find-competition">Find Competition</router-link>
+<div class="form">
+  <div class="rectangle-1"></div>
+  <div class="ellipse-1"></div>
+  <div class="ellipse-2"></div>
+  <div class="component-158"></div>
+  <div class="ellipse-12"></div>
+  <div class="ellipse-22"></div>
+  <div class="meroket">
+    Meroket
+    <br />
+  </div>
+  <router-link to="/join" class="find-competition">Find Competition</router-link>
       <router-link to="/teams" class="teams">Teams</router-link>
       <router-link to="/my-role" class="my-role">My Role</router-link>
       <router-link to="/projects" class="projects">Projects</router-link>
@@ -29,46 +29,40 @@
           <img src="../assets/image-30.png" />
         </router-link>
       </div>
-      <div class="ellipse-13"></div>
-      <div class="state-layer"></div>
-      <div class="lomba-1">
-        <div class="rectangle-2"></div>
-        <div class="djp-it-summit-2024">DJP IT SUMMIT 2024</div>
-        <div
-          class="lomba-hackathon-dengan-tema-artificial-intelligence-and-data-analytics-yang-diikuti-oleh-masyarakat-umum-di-indonesia"
-        >
-          Lomba Hackathon dengan tema “Artificial Intelligence and Data
-          Analytics” yang diikuti oleh masyarakat umum di Indonesia.
-        </div>
-        <div class="_02-juni-2024-s-d-02-juni-2024">
-          02-Juni-2024 s/d 02-Juni-2024
-        </div>
-        <div class="yogyakarta">Yogyakarta</div>
-        <div class="biaya-pendaftaran">Biaya Pendaftaran</div>
-        <div class="rp-25-000-tim">Rp. 25.000 / Tim</div>
-        <router-link to="/daftar-sekarang" class="button-daftar">
-          <div class="rectangle-31"></div>
-          <div class="daftar-sekarang">Daftar Sekarang</div>
-        </router-link>
-        <router-link to="/hubungi-narahubung" class="button-daftar">
-          <div class="rectangle-312"></div>
-          <div class="hubungi-narahubung">Hubungi Narahubung</div>
-        </router-link>
-      </div>
-      <!-- icon tanggal dan lokasi -->
-      <img class="icons-8-date-96-1" src="../assets/icons8-date-91.png" />
-      <img class="icons-8-location-100-1" src="../assets/icons8-location-100-10.png" />
-      <!-- poster -->
-      <img class="image-5" src="../assets/image-50.png" />
-      <div class="button">
-        <router-link to="/find-more-competition" class="label-text">
-          <div class="label-text2">Find more competition</div>
-        </router-link>
-      </div>
-      <div class="_11">
-        <div class="group-94">
-          <div class="meroket2">Meroket</div>
-          <svg
+  <div class="ellipse-13"></div>
+  <div class="form-background"></div>
+  <div class="isi-form">
+    <div class="phone-number-input">
+      <div class="phone-number-field"></div>
+      <div class="_62-821-123-4321">+62 821 123 4321</div>
+      <div class="phone-number">Phone Number</div>
+    </div>
+    <div class="e-mail-input">
+      <div class="e-mail-field"></div>
+      <div class="e-mail">E-mail</div>
+      <div class="gibran-raka-gmail-com">gibran.raka@gmail.com</div>
+    </div>
+    <div class="full-name-input">
+      <div class="full-name-field"></div>
+      <div class="full-name">Full Name</div>
+      <div class="gibran-rakabuming">Gibran Rakabuming</div>
+    </div>
+  </div>
+  <div class="personal-info">Personal Info</div>
+  <div class="button">
+    <div class="label-text">
+      <div class="label-text2">Back</div>
+    </div>
+  </div>
+  <div class="button2">
+    <div class="label-text">
+      <div class="label-text2">Next</div>
+    </div>
+  </div>
+  <div class="_12">
+    <div class="group-94">
+      <div class="meroket2">Meroket</div>
+      <svg
             class="g-4712"
             width="36"
             height="29"
@@ -76,6 +70,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
+        
             <path
               d="M35.6416 0L0.519319 0C0.400058 0 0.303223 0.0823654 0.303223 0.183974L0.303223 28.7934C0.303223 28.895 0.400058 28.9773 0.519319 28.9773H35.6416C35.7608 28.9773 35.8571 28.895 35.8571 28.7934V0.183974C35.8571 0.0823654 35.7608 0 35.6416 0Z"
               fill="#0EC5D7"
@@ -100,22 +95,22 @@
               stroke-width="2.50805"
             />
           </svg>
-        </div>
-        <div
-          class="l-rem-ipsum-od-ohet-dilogi-bell-trabel-samuligt-oh-bel-utom-diska-jinesade-bel-n-r-feras-redorade-i-belogi-far-paratyp-i-muv-ning-och-pesask-vyfisat-viktiga-poddradio-har-un-mad-och-inde"
-        >
-          Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska.
-          Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och
-          pesask vyfisat. Viktiga poddradio har un mad och inde.
-        </div>
-        <div class="group-96">
-          <router-link to="/home" class="home">Home</router-link>
-          <router-link to="/service" class="service">Service</router-link>
-          <router-link to="/contact" class="contact">Contact</router-link>
-          <router-link to="/resource" class="resource">Resource</router-link>
-          <router-link to="/about" class="about">About</router-link>
-        </div>
-        <div class="group-88">
+    </div>
+    <div
+      class="l-rem-ipsum-od-ohet-dilogi-bell-trabel-samuligt-oh-bel-utom-diska-jinesade-bel-n-r-feras-redorade-i-belogi-far-paratyp-i-muv-ning-och-pesask-vyfisat-viktiga-poddradio-har-un-mad-och-inde"
+    >
+      Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska.
+      Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och
+      pesask vyfisat. Viktiga poddradio har un mad och inde.
+    </div>
+    <div class="group-96">
+      <div class="home">Home</div>
+      <div class="service">Service</div>
+      <div class="contact">Contact</div>
+      <div class="resource">Resource</div>
+      <div class="about">About</div>
+    </div>
+    <div class="group-88">
           <div class="rectangle-16"></div>
           <svg
             class="instagram-logo"
@@ -242,39 +237,17 @@
         </svg>
         <div class="rectangle-18"></div>
       </div>
-    </div>
+</div>
 </template>
 
-
 <style scoped>
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        appearance: none;
-        background: none;
-
-        -webkit-font-smoothing: antialiased;
-      }
-
-      .daftar,
-.daftar * {
+    .form,
+.form * {
   box-sizing: border-box;
 }
-.daftar {
+.form {
   background: #525571;
-  height: 922px;
+  height: 921px;
   position: relative;
   box-shadow: 0px 4px 64.4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -285,7 +258,7 @@
   height: 69px;
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: -1px;
 }
 .background {
   position: absolute;
@@ -327,10 +300,10 @@
 .ellipse-12 {
   background: #4461f2;
   border-radius: 50%;
-  width: 226px;
+  width: 225.47px;
   height: 226px;
   position: absolute;
-  left: 1004px;
+  left: 1003.53px;
   top: 579px;
   filter: blur(158.5px);
 }
@@ -338,7 +311,7 @@
   background: #dda82a;
   border-radius: 50%;
   opacity: 0.44999998807907104;
-  width: 226px;
+  width: 225.47px;
   height: 226px;
   position: absolute;
   left: 800px;
@@ -461,194 +434,174 @@
   left: 1212px;
   top: 26px;
 }
-.page-daftar {
+.form2 {
   position: absolute;
   inset: 0;
 }
-.state-layer {
-  background: #efefef;
-  border-radius: 10px;
-  padding: 6px 16px 6px 16px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  width: 599.89px;
-  height: 483.64px;
+.form-background {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  width: 1244px;
+  height: 550px;
   position: absolute;
-  left: 538.12px;
-  top: 141.12px;
+  left: 28px;
+  top: 151px;
 }
-.lomba-1 {
-  width: 1437px;
-  height: 717.24px;
+.isi-form {
+  width: 903px;
+  height: 293px;
   position: static;
 }
-.djp-it-summit-2024 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-ExtraBold", sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  position: absolute;
-  left: 585px;
-  top: 193px;
-  width: 863.69px;
-  height: 24.78px;
+.phone-number-input {
+  width: 903px;
+  height: 87px;
+  position: static;
 }
-.lomba-hackathon-dengan-tema-artificial-intelligence-and-data-analytics-yang-diikuti-oleh-masyarakat-umum-di-indonesia {
-  color: #000000;
+.phone-number-field {
+  background: #f8f8f8;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #4b7df3;
+  border-width: 3px;
+  width: 903px;
+  height: 57px;
+  position: absolute;
+  left: 198px;
+  top: 454px;
+}
+._62-821-123-4321 {
+  color: #292929;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 223px;
+  top: 471px;
+  width: 582.31px;
+  height: 24.22px;
+}
+.phone-number {
+  color: #4b7df3;
   text-align: left;
   font-family: "Inter-Medium", sans-serif;
   font-size: 16px;
   font-weight: 500;
   position: absolute;
-  left: 585px;
-  top: 233px;
-  width: 376px;
-  height: 165px;
+  left: 223.31px;
+  top: 424px;
+  width: 303.83px;
+  height: 24.22px;
 }
-._02-juni-2024-s-d-02-juni-2024 {
-  color: #6c6c6c;
-  text-align: left;
-  font-family: "Montserrat-Medium", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  position: absolute;
-  left: 629.15px;
-  top: 317.69px;
-  width: 541.93px;
-  height: 27.39px;
-}
-.yogyakarta {
-  color: #6c6c6c;
-  text-align: left;
-  font-family: "Montserrat-Medium", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  position: absolute;
-  left: 629px;
-  top: 374px;
-  width: 541.93px;
-  height: 27.39px;
-}
-.biaya-pendaftaran {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  position: absolute;
-  left: 585.28px;
-  top: 440.52px;
-  width: 389.16px;
-  height: 23.47px;
-}
-.rp-25-000-tim {
-  color: #0023ff;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  position: absolute;
-  left: 585.28px;
-  top: 472.33px;
-  width: 388.89px;
-  height: 31.3px;
-}
-.button-daftar {
-  width: 237.98px;
-  height: 45.84px;
+.e-mail-input {
+  width: 903px;
+  height: 85px;
   position: static;
 }
-.rectangle-31 {
-  background: #000000;
-  border-radius: 5px;
-  width: 237.98px;
-  height: 45.84px;
-  position: absolute;
-  left: 585.28px;
-  top: 535.93px;
-}
-.daftar-sekarang {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Inter-Black", sans-serif;
-  font-size: 11px;
-  font-weight: 900;
-  position: absolute;
-  left: 636.1px;
-  top: 550.28px;
-  width: 137.58px;
-  height: 17.53px;
-}
-.rectangle-312 {
-  background: #ffffff;
-  border-radius: 5px;
+.e-mail-field {
+  background: #f8f8f8;
+  border-radius: 8px;
   border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 237.98px;
-  height: 45.84px;
+  border-color: #707070;
+  border-width: 3px;
+  width: 903px;
+  height: 56px;
   position: absolute;
-  left: 851.78px;
-  top: 535.93px;
+  left: 198px;
+  top: 353px;
 }
-.hubungi-narahubung {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Black", sans-serif;
-  font-size: 11px;
-  font-weight: 900;
+.e-mail {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   position: absolute;
-  left: 902.6px;
-  top: 550.28px;
-  width: 137.58px;
-  height: 17.53px;
+  left: 229.87px;
+  top: 324px;
+  width: 127.48px;
 }
-.icons-8-date-96-1 {
-  width: 27.42px;
-  height: 27.42px;
+.gibran-raka-gmail-com {
+  color: #292929;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   position: absolute;
-  left: 587px;
-  top: 318px;
-  object-fit: cover;
+  left: 223px;
+  top: 366px;
+  width: 354.83px;
 }
-.icons-8-location-100-1 {
-  width: 30.71px;
-  height: 30.71px;
-  position: absolute;
-  left: 585.28px;
-  top: 370.33px;
-  object-fit: cover;
+.full-name-input {
+  width: 903px;
+  height: 85px;
+  position: static;
 }
-.image-5 {
-  width: 395.91px;
-  height: 479.26px;
+.full-name-field {
+  background: #f8f8f8;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #707070;
+  border-width: 3px;
+  width: 903px;
+  height: 56px;
   position: absolute;
-  left: 103.83px;
-  top: 145.51px;
-  object-fit: cover;
+  left: 198px;
+  top: 247px;
+}
+.full-name {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 215.59px;
+  top: 218px;
+  width: 110.22px;
+}
+.gibran-rakabuming {
+  color: #292929;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 223px;
+  top: 266px;
+  width: 268px;
+}
+.personal-info {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Arial-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 199px;
+  top: 151px;
+  width: 366px;
+  height: 36px;
 }
 .button {
   display: flex;
   flex-direction: row;
-  gap: 103px;
+  gap: 0px;
   align-items: center;
   justify-content: center;
-  width: 601px;
+  width: 119px;
+  height: 44px;
   position: absolute;
-  left: 329px;
-  top: 662px;
+  left: 198px;
+  top: 550px;
 }
 .label-text {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(75, 125, 243, 0.65);
   border-radius: 5px;
-  padding: 5px 282px 5px 282px;
+  padding: 12px 41px 12px 41px;
   display: flex;
   flex-direction: row;
-  gap: 74px;
+  gap: 28px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
@@ -658,7 +611,7 @@
   color: #ffffff;
   text-align: center;
   font-family: "Roboto-Bold", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   position: relative;
@@ -666,13 +619,25 @@
   align-items: center;
   justify-content: center;
 }
-._11 {
+.button2 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 119px;
+  height: 44px;
+  position: absolute;
+  left: 982px;
+  top: 550px;
+}
+._12 {
   background: rgba(86, 92, 135, 0);
   width: 1320px;
   height: 242px;
   position: absolute;
   left: -10px;
-  top: 677px;
+  top: 679px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, 1);
   overflow: hidden;
@@ -904,5 +869,4 @@
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
-
 </style>
